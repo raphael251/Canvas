@@ -160,10 +160,10 @@ function Circle(x, y, dx, dy, radius) {
       this.y += this.dy;
 
       //interactivity
-      if (this.radius < 100 && mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
-         this.radius += 1;
+      if (this.radius < 70 && mouse.x - this.x < 50 && mouse.x - this.x > -50 && mouse.y - this.y < 50 && mouse.y - this.y > -50) {
+         this.radius += 2;
       } else if (this.radius > 2) {
-         this.radius -= 1;
+         this.radius -= 2;
       }
 
       this.draw();
@@ -172,12 +172,12 @@ function Circle(x, y, dx, dy, radius) {
 
 var circleArray = [];
 
-for(var i = 0 ; i < 300 ; i++) {
-   var radius = 50;
+for(var i = 0 ; i < 600 ; i++) {
+   var radius = 20;
    var x = Math.random() * (innerWidth - radius * 2) + radius;
    var y = Math.random() * (innerHeight - radius * 2) + radius;
-   var dx = (Math.random() - 0.5) * 4;
-   var dy = (Math.random() - 0.5) * 4;
+   var dx = (Math.random() - 0.5) * 3;
+   var dy = (Math.random() - 0.5) * 3;
    circleArray.push(new Circle(x, y, dx, dy, radius));
 }
 
